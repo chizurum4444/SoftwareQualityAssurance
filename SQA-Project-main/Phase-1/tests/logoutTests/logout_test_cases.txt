@@ -1,0 +1,6 @@
+logout0 allow logout if user is already logged_in
+logout1 no other transactions are accepted after logout
+logout2 daily transaction file has been written to 
+
+Note for all tests to be successful, a pass is required for each tested element in a test. e.g. if test0 checks a, b and c, then each of a, b and c 
+must pass for test0 to be considered a pass

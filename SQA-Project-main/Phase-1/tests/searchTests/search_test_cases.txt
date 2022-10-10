@@ -1,0 +1,10 @@
+search0 has correct inputs (contains city, rental price, number of bedrooms)
+search1 has correct outputs (lists units with false rental flags, correct information)
+search2 * works as input for one input value 
+search3 * works as input for 2 input values
+search4 * works as input for 3 input values
+search5 is correctly written to daily transaction
+search6 if no rentals are found, display "There are no results found"
+
+Note for all tests to be successful, a pass is required for each tested element in a test. e.g. if test0 checks a, b and c, then each of a, b and c 
+must pass for test0 to be considered a pass

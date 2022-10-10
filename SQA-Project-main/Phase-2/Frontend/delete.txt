@@ -1,0 +1,56 @@
+delete () {
+	print("enter usertype") //asking for userType
+	ask for input = userType
+	if (userType != admin) {
+		while (until userType == admin) {
+			print("this transaction can only be authorized by admin")
+			ask for input = userType
+		}
+	}
+
+	print("enter username) //asking for userName
+	ask for input = userName
+	
+	String userNameType = username+"_AA" //since only admins can create account, user type can only be AA
+
+	//read in user accounts file to check if username already exists
+	ArrayList<String> users = readFileLines("CurrentUserAccountsFile.txt");//users is all userAccounts read into ArrayList by the readFileLines method
+	while(users.contains(userNameType)){
+		print "username already exists"
+		ask for input = username
+	}
+
+	// writing to dailyTransactionsFile.txt
+	try(
+		FileWriter fw2 = new FileWriter("TransactionsFile.txt",true); //appends to TransactionFile if file exists, creates file if file doesn't exist
+		BufferedWriter bw2 = new BufferedWriter(fw2) 
+		PrintWriter outTransactions = new PrintWriter(bw2)
+	) {
+		outTransactions.println("02_"+userNameType"+"_00000000_000000000000000_0_000000_00");
+	} catch (IOException e){
+		//exception handling
+	}
+
+}
+
+// helper method to read all users from currentuseraccountsfile.txt into arraylist
+public static ArrayList<String> readFileLines(String fileName) {
+	BufferedReader rd;
+	ArrayList<String> lines = new ArrayList<String>();
+	try {
+		// open the reader
+		rd = new BufferedReader(new FileReader(fileName));
+		String line = null;
+		// read all the lines till the end
+		while ((line = rd.readLine()) != null) {
+			lines.add(line);
+		}
+		rd.close(); // close reader
+	} catch (final IOException e) {
+		System.out.println("Error reading file");
+		throw new RuntimeException(
+			"Error reading file : " + e.getMessage(), e);
+	}
+	return lines;
+}
+

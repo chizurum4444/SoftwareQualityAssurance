@@ -1,0 +1,7 @@
+login0 checks that the transaction is a login transaction
+login1 checks if the input file is a user account file (correct file type, all alphabetic fields are left justified, file ends with END)
+login2 checks if the username is valid (exists, length <= 15, ending is a proper type)
+login3 checks for prior login (no subsequent logins allowed until after a logout)
+
+Note for all tests to be successful, a pass is required for each tested element in a test. e.g. if test0 checks a, b and c, then each of a, b and c 
+must pass for test0 to be considered a pass

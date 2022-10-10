@@ -1,0 +1,10 @@
+delete0 checks if the user is logged in as an admin and that a logged in user's username cannot be deleted
+delete1 checks if the input username matches an existing user and is not the current user
+delete2 checks that the deleted user cannot use any transactions (including loggin in)
+delete3 checks that all outstanding rentals are removed
+delete4 checks that the transaction has been properly recorded on the daily transaction
+
+Note for all tests to be successful, a pass is required for each tested element in a test. e.g. if test0 checks a, b and c, then each of a, b and c 
+must pass for test0 to be considered a pass
+
+Note all tests other than delete0 the tests assume that the user is logged in as admin

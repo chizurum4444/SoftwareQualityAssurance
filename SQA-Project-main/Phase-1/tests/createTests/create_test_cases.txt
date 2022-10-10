@@ -1,0 +1,8 @@
+create0 username is unique and valid
+create1 user type is defined and valid
+create2 information saved to daily transaction
+create3 checks that username cannot be duplicated
+
+Note for all tests to be successful, a pass is required for each tested element in a test. e.g. if test0 checks a, b and c, then each of a, b and c 
+must pass for test0 to be considered a pass
+Note that create0 and create1 will use the same input tests create01.input

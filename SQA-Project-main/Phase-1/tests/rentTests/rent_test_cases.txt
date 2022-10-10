@@ -1,0 +1,13 @@
+rent0 user is not post-standard
+rent1 valid rental-ID
+rent2 valid number of nights requested (<=14)
+rent3 displays correct information (rent/night and total cost)
+rent4 confirmation form works (sets rented flag to true)
+rent5 correctly write to daily transaction
+
+Note for all tests to be successful, a pass is required for each tested element in a test. e.g. if test0 checks a, b and c, then each of a, b and c 
+must pass for test0 to be considered a pass
+
+Note for all tests, the rental is for the following
+Rental-ID   City    Rental-Amount   Number-of-bedrooms  Rented
+01234567    Oshawa  030.00          4                   false

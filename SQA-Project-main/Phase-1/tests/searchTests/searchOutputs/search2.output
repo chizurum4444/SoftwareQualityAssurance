@@ -1,0 +1,4 @@
+// Search results
+Rental-ID  City    Rental-Amount   Number-of-bedrooms  Rented
+01234567   Oshawa  010.00          2                   false
+76543210   Toronto 015.00          2                   false
